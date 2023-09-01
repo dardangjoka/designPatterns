@@ -18,5 +18,5 @@ public class EditorState {
         return editor.getType();
     }
 
-    //SOLID principles-> S
+    //SOLID principles-> Single principle
 }
