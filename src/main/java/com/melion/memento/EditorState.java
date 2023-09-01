@@ -3,10 +3,6 @@ package com.melion.memento;
 public class EditorState {
     private Editor editor;
 
-    public Editor restoreState(){
-        return new Editor(editor.getType(),editor.getContent(),editor.getTitle());
-    }
-
     public EditorState(Editor editor){
         this.editor = editor;
     }
