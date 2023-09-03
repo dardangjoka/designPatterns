@@ -11,9 +11,9 @@ import lombok.*;
 public class Editor {
     private String content;
     private String title;
-    private Type type;
+    private Type type;  //TYPE -> Editor Has A TYPE -> Composition
 
-    public Editor(Type type, String content, String title) {
+    public Editor(Type type, String content, String title) { // TYPE-> DEpendency
         this.title = title;
         this.type = type;
         this.content = content;

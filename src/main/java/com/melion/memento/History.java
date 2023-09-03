@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
+
 public class History {
     List<EditorState> editorStatesList = new ArrayList<>();
 
@@ -12,8 +13,14 @@ public class History {
     }
 
     public EditorState pop(){
-        int lastCout = editorStatesList.size()-1;
-        return editorStatesList.remove(lastCout);
+        try {
+
+            int lastCout = editorStatesList.size()-1;
+            return editorStatesList.remove(lastCout);
+        }catch (IndexOutOfBoundsException e){
+            System.out.println("Nuk ka ma gjendje \n" +e);
+            return null;
+        }
 
     }
 }
