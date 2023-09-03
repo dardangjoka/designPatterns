@@ -1,2 +1,4 @@
-package com.melion.memento.ushtrime.dardangjoka;public class Document {
+package com.melion.memento.ushtrime.dardangjoka;
+
+public class Document {
 }
