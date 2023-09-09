@@ -6,3 +6,4 @@ public class Goma implements Veglat{
         System.out.println("u shly ni pike");
     }
 }
+//

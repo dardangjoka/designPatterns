@@ -5,4 +5,7 @@ public class Brush implements Veglat{
     public void click(){
         System.out.println("u mush zi ni pike");
     }
+    public void dragDownWhileClick(){
+
+    }
 }

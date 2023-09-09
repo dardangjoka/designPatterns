@@ -6,6 +6,9 @@ public enum VeglatEnum {
     KOFJA(new Kofja());
 
     private Veglat veglat;
+    public Veglat setValue(){
+        return this.veglat;
+    }
     VeglatEnum(Veglat veglat) {
         this.veglat = veglat;
     }

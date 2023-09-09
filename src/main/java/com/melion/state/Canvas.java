@@ -2,8 +2,7 @@ package com.melion.state;
 
 public class Canvas {
 
-    public void clickHandler(Veglat veglat){
+    public void clickHander(Veglat veglat){
         veglat.click();
-
     }
 }
