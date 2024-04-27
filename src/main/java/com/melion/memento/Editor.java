@@ -28,6 +28,8 @@ public class Editor {
         this.content = editorState.getContent();
         this.type = editorState.getType();
         this.title = editorState.getTitle();
+        type =Type.MP4;
+        String str= type.vaule;
     }
 
     public EditorState saveState(){
