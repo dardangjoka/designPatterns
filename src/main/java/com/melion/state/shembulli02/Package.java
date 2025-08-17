@@ -2,14 +2,14 @@ package com.melion.state.shembulli02;
 
 
 public class Package {
-    private PackageState state = new OrderState();
-    boolean isAdmin = true;
+    private PackageState state;
+    boolean isAdmin = false;
 
     public void setState(PackageState state) {
         if(isAdmin)
         this.state = state;
         else
-            throw  new RuntimeException(" THis user is not validated or is not an admin");
+            throw  new RuntimeException("THis user is not validated or is not an admin");
     }
 
     public void previousState(){

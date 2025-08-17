@@ -5,4 +5,8 @@ public class GetRequest implements Request{
     public void send(String URI, String body){
         System.out.println("Reading Data from " + URI);
     }
+
+    public void getMethod(){
+        System.out.println("kjo eshte vetem per get");
+    }
 }
