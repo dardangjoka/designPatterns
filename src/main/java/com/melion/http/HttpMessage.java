@@ -1,2 +1,4 @@
-package com.melion.http;public class HttpMessage {
+package com.melion.http;
+
+public abstract class HttpMessage {
 }

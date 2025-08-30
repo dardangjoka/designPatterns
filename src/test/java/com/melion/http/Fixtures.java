@@ -1,2 +1,4 @@
-package com.melion.http;public class Fixtures {
+package com.melion.http;
+
+public class Fixtures {
 }

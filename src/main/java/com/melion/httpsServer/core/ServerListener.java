@@ -4,8 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -25,27 +23,24 @@ public class ServerListener extends Thread {
     @Override
     public void run() {
         try {
-
-            Socket socket = this.serverSocket.accept();
-            LOGGER.info("Connection accepted " + socket.getInetAddress());
-            InputStream inputStream = socket.getInputStream();
-            OutputStream outputStream  = socket.getOutputStream();
-
-            final String CRLF = "\n\r";
-            String HTML = "<h1> Hello Server </h1>";
-
-            String response = "HTTP/1.1 200 OK" + CRLF
-                    +"Content-length: " + HTML.getBytes().length + CRLF + CRLF
-                    + HTML + CRLF + CRLF;
-
-            outputStream.write(response.getBytes());
-
-//            inputStream.close();
-//            output
-//            socket.close();
-//            serverSocket.close();
+            while (serverSocket.isBound() && !serverSocket.isClosed()) {
+                Socket socket = this.serverSocket.accept();
+                HttpConnectionWorkerThread workerThread = new HttpConnectionWorkerThread(socket);
+                workerThread.start();
+            }
+//            serverSocket.close(); TODO
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            LOGGER.error(e.getMessage());
+        }
+        finally {
+            if(serverSocket != null) {
+                try {
+                    serverSocket.close();
+                } catch (IOException e) {
+                    LOGGER.error(e.getMessage());
+                }
+            }
         }
     }
 }

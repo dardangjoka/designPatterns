@@ -6,6 +6,6 @@ public class Test {
     public static void main(String[] args) {
         Canvas canvas = new Canvas();
 
-        canvas.clickHander(LAPSI.setValue());
+//        canvas.clickHander(LAPSI.setValue());
     }
 }

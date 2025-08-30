@@ -3,8 +3,6 @@ package com.melion.httpsServer.config;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.melion.httpsServer.utils.Json;
-import lombok.Getter;
-
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
